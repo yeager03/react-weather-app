@@ -1,8 +1,10 @@
 import { useState } from "react";
 const api = {
-	key: "d7596a46cd62cbc63f75642e208f20ad",
+	key: process.env.REACT_APP_USER_KEY,
 	base: "https://api.openweathermap.org/data/2.5/",
 };
+
+console.log(process.env.REACT_APP_USER_KEY);
 function App() {
 	const [query, setQuery] = useState(""); // поиск
 	const [weather, setWeather] = useState({}); // текующая погода
